@@ -2,8 +2,9 @@ import json
 from typing import Any
 
 import anyio
-from freight_agents.claims_intake.mcp_server import build_claims_server
 from mcp import Client
+
+from freight_agents.claims_intake.mcp_server import build_claims_server
 
 from .conftest import FIELDS, email, extraction, triage, turn
 

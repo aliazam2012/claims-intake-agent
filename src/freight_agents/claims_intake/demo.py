@@ -37,7 +37,7 @@ def main(argv: list[str] | None = None) -> int:
     tms = FixtureTms(root / "data" / "demo" / "tms.json")
     states: Counter[str] = Counter()
     tokens = 0
-    for case in load_cases(root / "apps" / "claims-intake" / "evals" / "golden.jsonl"):
+    for case in load_cases(root / "evals" / "golden.jsonl"):
         model = ScriptedModel([ModelTurn.model_validate(t) for t in case.reference], "reference")
         intake = ClaimsIntake(model, tms, stores, clock=lambda: EVAL_CLOCK)
         message = parse_eml((root / case.email).read_bytes())

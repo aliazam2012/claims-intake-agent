@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Any
 
 import pytest
+
 from freight_agents.claims_intake import cli
 
 from .conftest import FIELDS, draft, email, extraction, triage, turn

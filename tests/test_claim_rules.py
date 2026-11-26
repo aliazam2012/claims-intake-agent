@@ -3,9 +3,10 @@ from datetime import UTC, datetime
 
 from freight_agents.agentcore.hooks import HookContext, run_tool
 from freight_agents.agentcore.tools import ToolRegistry
-from freight_agents.claims_intake.rules import claim_rules
 from freight_agents.knowledge.index import Bm25Index, search_tool
 from freight_agents.llm import ToolCall
+
+from freight_agents.claims_intake.rules import claim_rules
 
 
 def test_loading_keeps_sources_per_passage() -> None:

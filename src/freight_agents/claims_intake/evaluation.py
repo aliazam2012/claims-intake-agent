@@ -106,7 +106,7 @@ def main(argv: list[str] | None = None, live_model: LiveModel | None = None) -> 
     parser.add_argument("--report", action="store_true", help="write a dated report")
     args = parser.parse_args(argv)
     root = repo_root()
-    evals_dir = root / "apps" / "claims-intake" / "evals"
+    evals_dir = root / "evals"
     cassettes = args.cassettes or evals_dir / "cassettes"
     every = load_cases(evals_dir / "golden.jsonl")
     cases = every[: args.limit] if args.limit else every

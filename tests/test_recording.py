@@ -1,8 +1,9 @@
 from pathlib import Path
 
-from freight_agents.claims_intake import evaluation
 from freight_agents.evals.runner import GoldenCase
 from freight_agents.llm import Model, ModelTurn, ScriptedModel, Usage
+
+from freight_agents.claims_intake import evaluation
 
 
 def _priced_reference(case: GoldenCase) -> Model:

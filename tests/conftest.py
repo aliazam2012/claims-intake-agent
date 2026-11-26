@@ -5,10 +5,11 @@ from pathlib import Path
 from typing import Any
 
 import pytest
-from freight_agents.claims_intake.workflow import ClaimsIntake, Stores
 from freight_agents.integrations.email import EmailMessage, parse_eml
 from freight_agents.integrations.tms import FixtureTms
 from freight_agents.llm import ModelTurn, ScriptedModel, ToolCall, Usage
+
+from freight_agents.claims_intake.workflow import ClaimsIntake, Stores
 
 SHIPMENT = {
     "pro_number": "7741-2209",

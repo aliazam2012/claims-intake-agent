@@ -3,6 +3,10 @@ from pathlib import Path
 from typing import Any
 
 import pytest
+from freight_agents.statecore.engine import CaseEngine
+from freight_agents.statecore.machine import IllegalTransition
+from freight_agents.statecore.store import SqliteEventStore
+
 from freight_agents.claims_intake.domain import (
     ClaimFields,
     add_months,
@@ -11,9 +15,6 @@ from freight_agents.claims_intake.domain import (
     missing_requirements,
 )
 from freight_agents.claims_intake.machine import CLAIMS_MACHINE
-from freight_agents.statecore.engine import CaseEngine
-from freight_agents.statecore.machine import IllegalTransition
-from freight_agents.statecore.store import SqliteEventStore
 
 COMPLETE: dict[str, Any] = {
     "pro_number": "7741-2209",

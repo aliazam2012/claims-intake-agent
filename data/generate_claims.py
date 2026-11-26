@@ -20,7 +20,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parent.parent
 INBOX = ROOT / "data" / "demo" / "inbox"
 TMS = ROOT / "data" / "demo" / "tms.json"
-GOLDEN = ROOT / "apps" / "claims-intake" / "evals" / "golden.jsonl"
+GOLDEN = ROOT / "evals" / "golden.jsonl"
 CARRIER = "Example Freight Lines"
 ATTACKER = "attacker@example.net"
 
